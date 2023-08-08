@@ -1,0 +1,21 @@
+---
+title: Git & GitHub training
+subtitle: SFA team's training
+format:
+  farquhar-revealjs:
+    toc: true
+    toc-depth: 1
+    toc-title: Summary
+    self-contained: false    
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 3
+author:
+  - name: Julien LEBRANCHU
+    orcid: 0000-0002-7759-0534
+    email: julien.lebranchu@ird.fr
+    institution: IRD/MARBEC/OB7
+date: last-modified
+---
+
+
