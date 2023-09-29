@@ -8,6 +8,7 @@ format:
     toc-title: Summary
     self-contained: false    
     preview-links: auto
+    email-obfuscation: javascript
     chalkboard: 
       boardmarker-width: 3
 author:
@@ -18,4 +19,71 @@ author:
 date: last-modified
 ---
 
+# Presentation of the Git software
 
+## What is Git ?
+
+-   **Free** and **open source** software
+-   **Light** and **local use** (without internet)
+-   The most popular Version Control Software (**VCS**)
+-   **Manages** and **tracks versions** of a project (code, manuscript, data)
+-   Can be linked with **remote server** (GitHub, Gitlab)
+
+## What is Git for ?
+
+-   For a **single user**:
+    -   **Track changes** (*commits*) over time with information about **when** and **what** are the changes
+    -   Eventually go **back in time**
+    -   **Synchronize** the project in the **cloud** with git servers (GitHub, Gitlab)
+
+## What is Git for ?
+
+-   For a **collaborative project**:
+    -   **Track changes** (*commits*) with information about **who**, **when** and **what** are the changes
+    -   **Resolve version conflict** when simultaneous changes
+    -   **Highlight a specific version** of the project (*tags*)
+        -   New version of a software
+        -   Submitted, revised versions of a paper
+    -   Create **derivates** of a project (*branches*)
+        -   Production
+        -   Development
+        -   Feature
+    -   **Publish** the project (open science)
+
+## In short...
+
+::: columns
+::: {.column width="40%"}
+![](images/phd_comics.png)
+:::
+
+::: {.column width="40%"}
+![](images/git-flow.jpg)
+:::
+:::
+
+# Presentation of the GitHub
+
+# Training {visibility="hidden"}
+
+## Installation and configuration {visibility="hidden"}
+
+
+
+## Getting started with Git in local {visibility="hidden"}
+
+
+## Use of multiples projects derivates (branches) {visibility="hidden"}
+
+# Go further {visibility="hidden"}
+
+## Git clients (IDE) {visibility="hidden"}
+
+## Working with large files {visibility="hidden"}
+
+## Sources {visibility="uncounted"}
+
+-   UMR MARBEC : Support de formation <https://github.com/umr-marbec/git-training>
+-   UMR AMAP (Atelier MAIA P3M), Montpellier: Introduction à GIT (04/04/2019)
+-   Plateau bioinformatique, Montpellier: Formation Git(Lab) (05/04/2018)
+-   **For the bold:** the full Git documentation (506 pages!): <https://git-scm.com/book/en/v2>
