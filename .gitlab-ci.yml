@@ -1,12 +1,8 @@
-image: busybox
+image: registry.gitlab.com/quarto-forge/docker/rstats
 
 pages:
-  stage: deploy
   script:
-  - echo 'Nothing to do...'
+    - quarto render --output-dir public
   artifacts:
     paths:
-    - public
-    expire_in: 1 day
-  only:
-    - publish
+      - public
