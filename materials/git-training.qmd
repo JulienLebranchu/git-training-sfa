@@ -1,0 +1,85 @@
+---
+title: Git & GitHub training
+subtitle: SFA team's training
+format:
+  farquhar-revealjs:
+    width: 1600
+    height: 900
+    toc: true
+    toc-depth: 1
+    toc-title: Summary
+    self-contained: false    
+    preview-links: auto
+    email-obfuscation: javascript
+    chalkboard: 
+      boardmarker-width: 3
+author:
+  - name: Julien LEBRANCHU
+    orcid: 0000-0002-7759-0534
+    email: julien.lebranchu@ird.fr
+    institution: IRD/MARBEC/OB7 
+date-modified: last-modified
+date: 31 10 2023
+filters:
+  - d2
+d2:
+  layout: elk
+  theme: "NeutralDefault"
+  sketch: false
+  pad: 20
+---
+
+
+## Good practices
+
+- **Pull** before any work on the project
+- **Commit** as frequently as possible
+- Write explicit **commit message**
+- **Push** regularly
+
+
+# Training
+
+## Installation and configuration
+### Installing Git [**Windows and Mac**]
+
+- Download and install Git from <https://git-scm.com/downloads>.
+- Download and install GitHub Desktop from <https://desktop.github.com>.
+
+## Installation and configuration
+### Git configuration: register who your are
+
+When done, open `Git Bash`, type
+
+```
+git config --global user.name "Firstname Lastname"
+
+git config --global user.email "email@adress.org"
+```
+
+**N.B.** These two lines identify you in the history of a project.
+
+```
+git config --global --list
+```
+
+## Installation and configuration
+### Git configuration with GitHub Desktop: register who your are
+
+#. In the menu bar, select *GitHub Desktop*, then click **Preferences***.
+#. In the *Preferences* window, click **Git**.
+
+![](images/github-select-git-pane.png){width="500"}
+
+More details on [Configuring and customizing GitHub Desktop]<https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop>
+
+## Getting started with Git in local {visibility="hidden"}
+
+
+## Use of multiples projects derivates (branches) {visibility="hidden"}
+
+# Go further {visibility="hidden"}
+
+## Git clients (IDE) {visibility="hidden"}
+
+## Working with large files {visibility="hidden"}
