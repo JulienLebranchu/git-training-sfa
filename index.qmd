@@ -23,11 +23,9 @@ This workshop is designed for those who want learn how use Git and GitHub.
 
 | Activity                                              |
 |:------------------------------------------------------|
+| [Introduction to Git/Github](materials/git-github-intro.html) |
+| [Training with Git and GitHub ](materials/git-training.html) |
 | [Git Reminder](materials/git-reminder.html) |
-<!-- | [Authoring with Markdown and more](materials/02-authoring.html)  |
-| [Computation and Editors](materials/03-computation-editors.html)  |
-| [Static reports and documents](materials/04-static-documents.html)    |
-| [Blogs & Websites](materials/05-websites.html)    | -->
 
 ------------------------------------------------------------------------
 

@@ -14,10 +14,10 @@ website:
         text: Home
       - text: Workshop
         menu: 
-      #     - href: materials/01-intro-quarto.qmd
-      #       text: "Intro to Quarto"
-      #     - href: materials/02-authoring.qmd
-      #       text: "Authoring Quarto"
+          - href: materials/git-github-intro.qmd
+            text: "Intro to Git/Github"
+          - href: materials/git-training.qmd
+            text: "Training with Git/Github"
       #     - href: materials/03-computation-editors.qmd
       #       text: "Code and Editors"
       #     - href: materials/04-static-documents.qmd
@@ -32,16 +32,16 @@ website:
     contents: 
       - section: "Workshop"
         contents: 
-          # - href: materials/01-intro-quarto.qmd
-          #   text: "Intro to Quarto"
-          # - href: materials/02-authoring.qmd
-          #   text: "Authoring Quarto"
-          # - href: materials/03-computation-editors.qmd
-          #   text: "Code and Editors"
-          # - href: materials/04-static-documents.qmd
-          #   text: "Static Documents"
-          # - href: materials/05-websites.qmd
-          #   text: "Blogs & Websites"
+          - href: materials/git-github-intro.qmd
+            text: "Intro to Git/Github"
+          - href: materials/git-training.qmd
+            text: "Training with Git/Github"
+      #     - href: materials/03-computation-editors.qmd
+      #       text: "Code and Editors"
+      #     - href: materials/04-static-documents.qmd
+      #       text: "Static Documents" 
+          - href: materials/git-reminder.qmd
+            text: "Git Reminder"
 format:
   html:
     theme: cosmo
