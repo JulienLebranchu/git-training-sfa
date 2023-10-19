@@ -1,0 +1,36 @@
+---
+title: "Getting Started with Git/GitHub"
+author: "Julien LEBRANCHU"
+format: html
+---
+
+:::{.callout-tip}
+
+## Pre Work
+
+- Install [latest](https://www.rstudio.com/products/rstudio/download/#download) version of RStudio
+- Download and install Git from <https://git-scm.com/downloads>.
+- Download and install GitHub Desktop from <https://desktop.github.com>.
+
+:::
+
+
+## Overview
+
+This workshop is designed for those who want learn how use Git and GitHub.
+
+### Schedule
+
+| Activity                                              |
+|:------------------------------------------------------|
+| [Git Reminder](materials/git-reminder.html) |
+<!-- | [Authoring with Markdown and more](materials/02-authoring.html)  |
+| [Computation and Editors](materials/03-computation-editors.html)  |
+| [Static reports and documents](materials/04-static-documents.html)    |
+| [Blogs & Websites](materials/05-websites.html)    | -->
+
+------------------------------------------------------------------------
+
+![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is
+licensed under a [Creative Commons Attribution 4.0 International
+License](https://creativecommons.org/licenses/by/4.0/).

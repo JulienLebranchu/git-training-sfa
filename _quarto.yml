@@ -1,3 +1,52 @@
 project:
-  output-dir: _outputs
-  resources: static  
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "materials/*.qmd"
+
+
+website:
+  title: "Getting Started with Git/GitHub"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Workshop
+        menu: 
+      #     - href: materials/01-intro-quarto.qmd
+      #       text: "Intro to Quarto"
+      #     - href: materials/02-authoring.qmd
+      #       text: "Authoring Quarto"
+      #     - href: materials/03-computation-editors.qmd
+      #       text: "Code and Editors"
+      #     - href: materials/04-static-documents.qmd
+      #       text: "Static Documents" 
+          - href: materials/git-reminder.qmd
+            text: "Git Reminder"
+    right: 
+      - icon: gitlab
+        href: https://github.com/rstudio-conf-2022/get-started-quarto
+  sidebar: 
+    style: docked
+    contents: 
+      - section: "Workshop"
+        contents: 
+          # - href: materials/01-intro-quarto.qmd
+          #   text: "Intro to Quarto"
+          # - href: materials/02-authoring.qmd
+          #   text: "Authoring Quarto"
+          # - href: materials/03-computation-editors.qmd
+          #   text: "Code and Editors"
+          # - href: materials/04-static-documents.qmd
+          #   text: "Static Documents"
+          # - href: materials/05-websites.qmd
+          #   text: "Blogs & Websites"
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
