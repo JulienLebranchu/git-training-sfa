@@ -2,7 +2,7 @@ image: registry.gitlab.com/quarto-forge/docker/rstats
 
 pages:
   script:
-    -  quarto render git-training.qmd --output-dir public  --output index.html  
+    -  quarto render --output-dir public
   artifacts:
     paths:
       - public
