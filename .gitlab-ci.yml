@@ -1,6 +1,9 @@
 image: registry.gitlab.com/quarto-forge/docker/rstats
 
 pages:
+  before_script:
+    - curl -fsSL https://d2lang.com/install.sh | sh -s --
+    - export PATH=$HOME/.local/bin:$PATH
   script:
     -  quarto render --output-dir public
   artifacts:
