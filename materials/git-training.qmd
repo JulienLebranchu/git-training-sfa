@@ -5,7 +5,7 @@ format:
   farquhar-revealjs:
     width: 1600
     height: 900
-    toc: true
+    toc: false
     toc-depth: 1
     toc-title: Summary
     self-contained: false    
@@ -26,9 +26,35 @@ d2:
   layout: elk
   theme: "NeutralDefault"
   sketch: false
-  pad: 20
+  pad: 0
 ---
 
+```{r}
+#| include: false
+library(countdown)
+countdown_timer <- function(
+    minutes = 1, 
+    play_sound = TRUE, 
+    font_size = "2em", 
+    ...
+) {
+  countdown(
+    minutes = minutes,
+    # Fanfare when it's over
+    play_sound = play_sound,
+    # Set timer theme to match solarized colors
+    color_border              = "#404041",
+    color_text                = "white",
+    color_background = "#447099",
+    color_running_background  = "#72994E",
+    color_running_text        = "white",
+    color_finished_background = "#EE6331",
+    color_finished_text       = "white",
+    font_size = font_size,
+    ...
+  )
+}
+```
 
 ## Good practices
 
@@ -36,9 +62,6 @@ d2:
 - **Commit** as frequently as possible
 - Write explicit **commit message**
 - **Push** regularly
-
-
-# Training
 
 ## Installation and configuration
 ### Installing Git [**Windows and Mac**]
@@ -71,15 +94,315 @@ git config --global --list
 
 ![](images/github-select-git-pane.png){width="500"}
 
-More details on [Configuring and customizing GitHub Desktop]<https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop>
-
-## Getting started with Git in local {visibility="hidden"}
+More details on [Configuring and customizing GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
 
 
-## Use of multiples projects derivates (branches) {visibility="hidden"}
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#2472b5" transition="slide-in"}
+:::: {.columns}
 
-# Go further {visibility="hidden"}
+::: {.column width="50%"}
+- Open `Github Desktop` and create a new repository `training-git`
+- Choose a local path
+- Click on `Create Repository`
+:::
 
-## Git clients (IDE) {visibility="hidden"}
+::: {.column width="50%"}
+![](images/training-github-desktop-init.png)
+:::
 
-## Working with large files {visibility="hidden"}
+::::
+```{R}
+#| echo: false
+
+countdown_timer(2)
+```
+
+## First Commit
+
+- Create a `README.md` file $\rightarrow$ README.md is now in
+Workspace but not in Local
+- When you type `git status` 
+
+```
+$ git status
+Sur la branche main
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+	README.md
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
+```
+```{mermaid}
+graph LR
+    A[Workspace] 
+    B[Index]  
+    C[Local]
+
+```
+
+```{.d2 height="350px"}
+direction: right
+grid-rows: 2
+grid-columns: 3
+Workspace
+Index
+Local
+
+readme: README.md {
+  shape: image
+  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
+}
+
+```
+
+
+## First Commit
+
+- Type `git add README.md` and `git status`
+```
+$ git status
+Sur la branche main
+Modifications qui seront validées :
+  (utilisez "git restore --staged <fichier>..." pour désindexer)
+	nouveau fichier : README.md
+```
+
+```{mermaid}
+graph LR
+    A[Workspace] -- git add --> B[Index] ----> C[Local]   
+```
+
+<!-- 
+```{.d2 height="250px"}
+direction : right
+Workspace
+Index
+Local
+
+Workspace -> Index : git add
+Index -- Local
+
+readme: README.md {
+  shape: image
+  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
+}
+``` 
+-->
+
+## First Commit
+
+- Type `git commit -m ”First commit”`
+```{mermaid}
+graph LR
+    A[Workspace] ----> B[Index] -- git commit --> C[Local]   
+```
+<!-- ```{.d2 height="150px"}
+direction: right
+Index
+Local
+
+Workspace -- Index
+Index -> Local : git commit
+
+
+``` -->
+
+
+```
+$ git commit -m "First commit"
+[main fde1cd2] First commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+```
+fde1cd2 is a short version of the identifier of the commit
+
+- Type `git log`
+
+```
+commit fde1cd295a8403756d655ec6d1f2be9eb908f649 (HEAD -> main)
+Author: Julien Lebranchu <julien.lebranchu@ird.fr>
+Date:   Fri Oct 20 14:36:19 2023 +0400
+
+    First commit
+
+commit 25681b3e0212f771a4594abc008d5352436a6244
+Author: Julien Lebranchu <julien.lebranchu@ird.fr>
+Date:   Fri Oct 20 14:35:11 2023 +0400
+
+    Initial commit
+```
+
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#2472b5" transition="slide-in"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Create a `README.md` file from your explorer file
+- With the GitHub Desktop
+  - Add the file 
+  - Commit the changes 
+
+- Explore the interface, specialy `history` tab.
+:::
+
+::: {.column width="50%"}
+![](images/training-github-desktop-add.png)
+:::
+::::
+
+```{R}
+#| echo: false
+
+countdown_timer(5)
+```
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#2472b5" transition="slide-in"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Add a content in `README.md` file and `commit` the changes
+:::
+
+::: {.column width="50%"}
+![](images/training-github-desktop-2nd-commit.png)
+:::
+::::
+
+```{R}
+#| echo: false
+
+countdown_timer(2)
+```
+
+## Creating tags
+
+Git has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
+```
+$ git tag -a v1.0.O -m "my version 1.0.0"
+```
+
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#2472b5" transition="slide-in"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Open the `README.md` file 
+- Type `## Version v1.0.0`.
+- Commit the changes
+
+- Create a tag `v1.0.0` with right click the last commit
+:::
+
+::: {.column width="50%"}
+![](images/training-github-desktop-3rd-commit.png)
+:::
+::::
+
+```{R}
+#| echo: false
+
+countdown_timer(2)
+```
+
+## Ignoring files
+
+It is possible to tell Git to ignore some files by using a `.gitignore` file.
+
+A gitignore file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected.
+
+Example for `R` project
+
+```R
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+```
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#2472b5" transition="slide-in"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+- Create an empty `output.log` file
+- Check the status in `GitHub Desktop`
+- Now create a `.gitignore` file
+  - write `*.log`. 
+- The `output.log` file no longer appears as **Untracked**
+- Commit with ”Fourth commit”
+
+:::
+
+::: {.column width="50%"}
+![](images/training-github-desktop-4th-commit.png)
+:::
+::::
+
+```{R}
+#| echo: false
+
+countdown_timer(3)
+```
+
+## Moving in the history
+
+- `git checkout v1.0.0` → move to a tag
+
+```{mermaid}
+%%{init: {
+  "theme": "base"
+}}%%
+gitGraph
+    commit id: "25681b3"
+    commit id: "fde1cd2"
+    commit id: "9b0dce3"
+    commit id: "017fc9d" tag: "v1.0.0" type: HIGHLIGHT
+    commit id: "fe96d29"
+```
+
+- `git checkout fde1cd2` → move to the first commit
+
+```{mermaid}
+%%{init: {
+  "theme": "base"
+}}%%
+gitGraph
+    commit id: "25681b3"
+    commit id: "fde1cd2" type: HIGHLIGHT
+    commit id: "9b0dce3"
+    commit id: "017fc9d" tag: "v1.0.0"
+    commit id: "fe96d29"
+```
+
+- `git checkout main (master)` → move at the latest commit
+
+```{mermaid}
+%%{init: {
+  "theme": "base"
+}}%%
+gitGraph
+    commit id: "25681b3"
+    commit id: "fde1cd2"
+    commit id: "9b0dce3"
+    commit id: "017fc9d" tag: "v1.0.0"
+    commit id: "fe96d29" type: HIGHLIGHT
+```
+**N.B.** HEAD is a symbolic reference pointing to your location in history
+
+
+## Publishing on GitHub
+
+## Resolve a conflict
+
+## Working with branches
+
