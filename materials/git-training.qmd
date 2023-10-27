@@ -5,7 +5,7 @@ format:
   farquhar-revealjs:
     width: 1600
     height: 900
-    toc: false
+    toc: true
     toc-depth: 1
     toc-title: Summary
     self-contained: false    
@@ -13,6 +13,9 @@ format:
     email-obfuscation: javascript
     chalkboard: 
       boardmarker-width: 3
+header-includes: |
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        rel="stylesheet"/>
 author:
   - name: Julien LEBRANCHU
     orcid: 0000-0002-7759-0534
@@ -28,6 +31,10 @@ d2:
   sketch: false
   pad: 0
 ---
+
+::: hidden
+  {{< fa thumbs-up >}} 
+:::
 
 ```{r}
 #| include: false
@@ -55,13 +62,7 @@ countdown_timer <- function(
   )
 }
 ```
-
-## Good practices
-
-- **Pull** before any work on the project
-- **Commit** as frequently as possible
-- Write explicit **commit message**
-- **Push** regularly
+# Installation and configuration
 
 ## Installation and configuration
 ### Installing Git [**Windows and Mac**]
@@ -96,6 +97,7 @@ git config --global --list
 
 More details on [Configuring and customizing GitHub Desktop](https://docs.github.com/en/desktop/configuring-and-customizing-github-desktop/configuring-git-for-github-desktop)
 
+# Training on solo project
 
 ## `r fontawesome::fa("laptop-code", "white")` Your Turn {background-color="#2472b5" transition="slide-in"}
 :::: {.columns}
@@ -134,27 +136,9 @@ aucune modification ajoutée à la validation mais des fichiers non suivis sont 
 ```
 ```{mermaid}
 graph LR
-    A[Workspace] 
-    B[Index]  
-    C[Local]
+    A[fa:fa-file Workspace] ----> B[Index] ----> C[Local]
 
-```
-
-```{.d2 height="350px"}
-direction: right
-grid-rows: 2
-grid-columns: 3
-Workspace
-Index
-Local
-
-readme: README.md {
-  shape: image
-  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
-}
-
-```
-
+``` 
 
 ## First Commit
 
@@ -169,25 +153,9 @@ Modifications qui seront validées :
 
 ```{mermaid}
 graph LR
-    A[Workspace] -- git add --> B[Index] ----> C[Local]   
+    A[Workspace] -- git add --> B[Index] ----> C[Local]  
 ```
 
-<!-- 
-```{.d2 height="250px"}
-direction : right
-Workspace
-Index
-Local
-
-Workspace -> Index : git add
-Index -- Local
-
-readme: README.md {
-  shape: image
-  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
-}
-``` 
--->
 
 ## First Commit
 
@@ -196,17 +164,6 @@ readme: README.md {
 graph LR
     A[Workspace] ----> B[Index] -- git commit --> C[Local]   
 ```
-<!-- ```{.d2 height="150px"}
-direction: right
-Index
-Local
-
-Workspace -- Index
-Index -> Local : git commit
-
-
-``` -->
-
 
 ```
 $ git commit -m "First commit"
@@ -399,10 +356,158 @@ gitGraph
 ```
 **N.B.** HEAD is a symbolic reference pointing to your location in history
 
+## `r fontawesome::fa("laptop-code", "white")` Your Turn / Publishing on GitHub {background-color="#2472b5" transition="slide-in"}
 
-## Publishing on GitHub
+- Open `Github Desktop` 
+- Click on `Publish repository`
+- View the repository on <https://www.github.com>
+  - Go to `Repository` > `View on GitHub` 
+  - Explore the `Repository`
+
+![](images/training-github-desktop-publish.png)
+
+
+```{R}
+#| echo: false
+
+countdown_timer(2)
+```
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn / Resolve a conflict {background-color="#2472b5" transition="slide-in"}
+
+- On `GitHub`, add `x = 1` at the end of the `README.md` file.
+- On your computer, edit the `README.md` and add `x = 2`.
+- Open `Github Desktop` 
+  - Add `README.md`
+  - Commit **Fifth commit**
+  - Push the commit
+
+
+```{R}
+#| echo: false
+
+countdown_timer(3)
+```
+
+. . .
+
+![](images/training-github-desktop-resolve.png)
+
 
 ## Resolve a conflict
 
-## Working with branches
+
+- This is due to a diverging history that cannot be solved automatically by Git.
+
+- `origin/main` corresponding to the version on the remote server
+
+```{mermaid}
+%%{init: {
+  "theme": "base"
+}}%%
+gitGraph
+    commit id: "25681b3"
+    commit id: "fde1cd2"
+    commit id: "9b0dce3"
+    commit id: "017fc9d" tag: "v1.0.0"
+    commit id: "fe96d29"
+    branch origin/main
+      commit id: "4ba5ab5"
+    checkout main
+    commit id: "5af862d"
+```
+
+## Resolve a conflict
+
+If we open the `README.md` file, you should have
+
+```
+## Version v1.0.0.
+
+<<<<<<< HEAD
+x = 2
+=======
+x = 1
+>>>>>>> 4ba5ab5f6ba79f7ac53d6bcf7ffc7e883ab469e2
+```
+
+*N.B.* These are conflicts markers. Git doesn’t know whether to chose x
+= 1 or x = 2. **This is your job!!**
+
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn / Resolve a conflict {background-color="#2472b5" transition="slide-in"}
+
+- Edit the `README.md` and replace the 5 lines below by x = 3. 
+
+```
+## Version v1.0.0.
+
+<<<<<<< HEAD
+x = 2
+=======
+x = 1
+>>>>>>> 4ba5ab5f6ba79f7ac53d6bcf7ffc7e883ab469e2
+```
+
+- Commit and push the changes
+
+```{R}
+#| echo: false
+
+countdown_timer(2)
+```
+
+. . .
+
+```{mermaid}
+%%{init: {
+  "theme": "base"
+}}%%
+gitGraph
+    commit id: "25681b3"
+    commit id: "fde1cd2"
+    commit id: "9b0dce3"
+    commit id: "017fc9d" tag: "v1.0.0"
+    commit id: "fe96d29"
+    branch origin/main
+      commit id: "4ba5ab5"
+    checkout main
+    commit id: "5af862d"
+    merge origin/main
+    commit id: "aad87f1"
+```
+
+## Good practices
+
+- **Pull** before any work on the project
+- **Commit** as frequently as possible
+- Write explicit **commit message**
+- **Push** regularly
+
+## GitHub and RStudio
+
+We need to link RStudio and GitHub to work togheter *without enter the identifier/password each time*.
+
+::: {.columns}
+
+::: {.column width="60%"}
+```R
+library(usethis)
+usethis::create_github_token(description = "R-GITHUB-RSTUDIO")
+```
+- Fill the field "Expiration" with **No expiration**
+- Click on **Generate token**
+- Copy the token key : **ghp_XXXXXXXXXXXXXX** via {{< fa copy >}}
+
+```R
+library(gitcreds)
+gitcreds_set()
+```
+:::
+
+::: {.column width="40%"}
+![](images/training-github-pat.png)
+:::
+
+::::
 
