@@ -207,9 +207,18 @@ Command:
 - **Push** regularly
 
 
-## Sources {visibility="uncounted"}
+## R/Git/Github && Sources {visibility="uncounted"}
 
-- UMR MARBEC : Support de formation <https://github.com/umr-marbec/git-training>
+### Go further 
+
+- **Happy Git and GitHub for the useR**
+  - <https://happygitwithr.com>
+
+### Sources
+
+- UMR MARBEC : Support de formation 
+  - <https://github.com/umr-marbec/git-training>
 - UMR AMAP (Atelier MAIA P3M), Montpellier: Introduction à GIT (04/04/2019)
 - Plateau bioinformatique, Montpellier: Formation Git(Lab) (05/04/2018)
-- **For the bold:** the full Git documentation (506 pages!): <https://git-scm.com/book/en/v2>
+- **For the bold:** the full Git documentation (506 pages!) 
+  - <https://git-scm.com/book/en/v2>
