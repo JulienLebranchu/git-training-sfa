@@ -1,7 +1,7 @@
 /*-- scss:defaults --*/
 
 // Custom colours and variables
-$farquhar-primary: #03295f;
+$farquhar-primary: #00476b;
 $farquhar-secondary: #2472b5;
 $farquhar-important: #e20613;
 $farquhar-bg: #00476b;
@@ -84,22 +84,26 @@ $selection-bg: $farquhar-secondary !default;
   color: $farquhar-primary;
 }
 
-.reveal .level1 {
+.backgrounds .level1 {
   background-color: $farquhar-bg;
-  background-image: url("/static/ob7-fond.svg") ; 
+  background-image: url("https://www.ob7.ird.fr/images/ob7-fond.svg") ; 
   background-repeat: no-repeat;
+}
+.reveal h1 {
+  font-size: 3.5em;
 }
 
 .reveal h2 {
   font-weight: 350;
-  font-size: 1.4em;
+  font-size: 2.5em;
+  color: $farquhar-primary;
 }
 
 .reveal h3 {
   color: $farquhar-secondary;
   font-style: italic;
   font-weight: 350;
-  font-size: 0.95em;
+  font-size: 1.5em;
 }
 
 .reveal h4 {
