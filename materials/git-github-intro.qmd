@@ -32,25 +32,95 @@ d2:
 
 # Presentation of the Git software
 
+## What is Version Control Software (VCS)
+
+### Git is Version Control Software
+
+::: {.notes}
+VCS is a software to track and manages changes in your project.
+
+It's for all kind of projets:
+
+- to develop a full software 
+- to write an article or a report for a scientific journal or IOTC secreteriat
+- to publish a website
+...
+
+VCS improves the following factors: 
+
+- Collaboration 
+- Storing Versions 
+- Backup 
+- Improves visibility 
+- Accelerate product delivery
+:::
+
+Version control - also known as source control or revision control - is an software development practice for tracking and managing changes made to code and other files. 
+
+VCS improves the following factors: 
+
+- Collaboration 
+- Storing Versions 
+- Backup 
+- Improves visibility 
+- Accelerate product delivery
+
+
+## What is Version Control Software (VCS)
+### Centralised vs Distributed 
+
+::: {.notes}
+Two kind of CVS.
+
+Drawbacks of CVCS :
+
+- It is not locally available, which means we must connect to the network to perform operations. 
+- During the operations, if the central server gets crashed, there is a high chance of losing the data. 
+- For every command, CVCS connects the central server which impacts speed of operation 
+
+
+Benefits of DVCS:
+​
+- Except for pushing and pulling the code, the user can work offline in DVCS 
+- DVCS is fast compared to CVCS because you don't have to contact the central server for every command 
+- Merging and branching the changes in DVCS is very easy 
+- Performance of DVCS is better 
+- Even if the main server crashes, code will be stored in the local systems 
+
+:::
+
+![](images/centralizedVSdistributed.83b434d0.png){width="120%"}
+
 ## What is Git ? 
-
-![](images/git_logo.png){width=100}
-
-- **Free** and **open source** software
-- **Light** and **local use** (without internet)
-- The most popular Version Control Software (**VCS**)
-- **Manages** and **tracks versions** of a project (code, manuscript, data)
-- Can be linked with **remote server** (GitHub, Gitlab)
 
 ::: {.notes}
 :::
+
+![](images/git_logo.png){width=100}
+
+- The most popular Version Control Software (**VCS**)
+- **Free** and **open source** software
+- **Light** and **local use** (without the internet)
+- **Manages** and **tracks versions** of a project (code, manuscript, data)
+- Can be linked with **a remote server** (GitHub, Gitlab)
+
 
 ## What is Git for ?
 ### For a **single user**
 
 - **Track changes** (*commits*) over time with information about **when** and **what** are the changes
 - Eventually go **back in time**
-- **Synchronize** the project in the **cloud** with git servers (GitHub, Gitlab)
+- **Synchronise** the project in the **cloud** with git servers (GitHub, Gitlab)
+
+::: {.notes}
+It can use for projet with a single user.
+
+For example, I use git and gitlab to write this training :
+
+https://forge.ird.fr/marbec/ob7/training/git-training.git/
+
+It will be easier if tomorrow someone from my team want collaborate on this project or if you want get the code for you, you will always have the last version.
+:::
 
 ## What is Git for ?
 ### For a **collaborative project**
@@ -58,13 +128,16 @@ d2:
 - **Track changes** (*commits*) with information about **who**, **when** and **what** are the changes
 - **Resolve version conflict** when simultaneous changes
 - **Highlight a specific version** of the project (*tags*)
-    - New version of a software
+    - A new version of a software
     - Submitted, revised versions of a paper
-- Create **derivates** of a project (*branches*)
+- Create **derivatives** of a project (*branches*)
     - Production
     - Development
     - Feature
 - **Publish** the project (open science)
+
+::: {.notes}
+:::
 
 ## What is Git for ?
 ### Example of branches
@@ -81,6 +154,15 @@ d2:
 :::
 ::::
 
+::: {.notes}
+You can develop your own strategy inside a project.
+
+Minimalist is to have two branches `main`and `develop`
+
+More complex is the Git Flow strategy.
+
+:::
+
 # Presentation of GitHub
 
 ## What is GitHub Inc.? {scrollable=true}
@@ -89,7 +171,7 @@ d2:
 
 - Access to the control and collaboration features for every **project**.
 - Work with public and private **repositories**.
-- Develop a **networking**.
+- Develop **networking**.
 - Source of information.
 - Allows to **host personal websites**
 - **Continuous integration** using [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions)
@@ -208,7 +290,7 @@ Command:
 - **Push** regularly
 
 
-## R/Git/Github && Sources {visibility="uncounted"}
+## R/Git/GitHub && Sources {visibility="uncounted"}
 
 ### Go further 
 
