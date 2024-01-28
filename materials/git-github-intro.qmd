@@ -11,6 +11,7 @@ format:
     self-contained: false    
     preview-links: auto
     email-obfuscation: javascript
+    highlight-style: github
     chalkboard: 
       boardmarker-width: 3
 author:
@@ -19,7 +20,7 @@ author:
     email: julien.lebranchu@ird.fr
     institution: IRD/MARBEC/OB7 
 date-modified: last-modified
-date: 31 10 2023
+date: 30 01 2024
 filters:
   - d2
 d2:

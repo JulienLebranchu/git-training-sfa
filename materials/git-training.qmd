@@ -11,6 +11,7 @@ format:
     self-contained: false    
     preview-links: auto
     email-obfuscation: javascript
+    highlight-style: github
     chalkboard: 
       boardmarker-width: 3
 header-includes: |
@@ -22,7 +23,7 @@ author:
     email: julien.lebranchu@ird.fr
     institution: IRD/MARBEC/OB7 
 date-modified: last-modified
-date: 31 10 2023
+date: 30 01 2024
 filters:
   - d2
 d2:
@@ -75,15 +76,14 @@ countdown_timer <- function(
 
 When done, open `Git Bash`, type
 
-```
+```Shell
 git config --global user.name "Firstname Lastname"
-
 git config --global user.email "email@adress.org"
 ```
 
 **N.B.** These two lines identify you in the history of a project.
 
-```
+```Shell
 git config --global --list
 ```
 
@@ -125,37 +125,46 @@ countdown_timer(2)
 Workspace but not in Local
 - When you type `git status` 
 
-```
+```Shell
 $ git status
+```
+
+````
 Sur la branche main
 Fichiers non suivis:
   (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
 	README.md
 
 aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
-```
+````
+
 ```{mermaid}
 graph LR
     A[fa:fa-file Workspace] ----> B[Index] ----> C[Local]
-
 ``` 
 
 ## First Commit
 
 - Type `git add README.md` and `git status`
-```
-$ git status
-Sur la branche main
-Modifications qui seront validées :
-  (utilisez "git restore --staged <fichier>..." pour désindexer)
-	nouveau fichier : README.md
+```Shell
+$ git add README.md
 ```
 
 ```{mermaid}
 graph LR
-    A[Workspace] -- git add --> B[Index] ----> C[Local]  
+    A[Workspace] -- git add --> B[fa:fa-file Index] ----> C[Local]  
 ```
 
+```Shell
+$ git status
+```
+
+````
+Sur la branche main
+Modifications qui seront validées :
+  (utilisez "git restore --staged <fichier>..." pour désindexer)
+	nouveau fichier : README.md
+````
 
 ## First Commit
 
@@ -165,15 +174,23 @@ graph LR
     A[Workspace] ----> B[Index] -- git commit --> C[Local]   
 ```
 
-```
+```Shell
 $ git commit -m "First commit"
+```
+
+```
 [main fde1cd2] First commit
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 README.md
 ```
+
 fde1cd2 is a short version of the identifier of the commit
 
 - Type `git log`
+
+```Shell
+$ git log
+```
 
 ```
 commit fde1cd295a8403756d655ec6d1f2be9eb908f649 (HEAD -> main)
@@ -236,7 +253,8 @@ countdown_timer(2)
 ## Creating tags
 
 Git has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).
-```
+
+```Shell
 $ git tag -a v1.0.O -m "my version 1.0.0"
 ```
 
@@ -431,8 +449,9 @@ x = 1
 >>>>>>> 4ba5ab5f6ba79f7ac53d6bcf7ffc7e883ab469e2
 ```
 
-*N.B.* These are conflicts markers. Git doesn’t know whether to chose x
-= 1 or x = 2. **This is your job!!**
+*N.B.* These are conflicts markers. 
+
+Git doesn’t know whether to chose `x = 1` or `x = 2`. **This is your job!!**
 
 
 ## `r fontawesome::fa("laptop-code", "white")` Your Turn / Resolve a conflict {background-color="#2472b5" transition="slide-in"}
@@ -440,8 +459,6 @@ x = 1
 - Edit the `README.md` and replace the 5 lines below by x = 3. 
 
 ```
-## Version v1.0.0.
-
 <<<<<<< HEAD
 x = 2
 =======
@@ -456,8 +473,6 @@ x = 1
 
 countdown_timer(2)
 ```
-
-. . .
 
 ```{mermaid}
 %%{init: {
@@ -503,6 +518,8 @@ usethis::create_github_token(description = "R-GITHUB-RSTUDIO")
 library(gitcreds)
 gitcreds_set()
 ```
+- Paste the key
+
 :::
 
 ::: {.column width="40%"}
