@@ -1,0 +1,116 @@
+---
+title: Work with GitHub
+subtitle: SFA team's training
+format:
+  farquhar-revealjs:
+    width: 1600
+    height: 900
+    toc: true
+    toc-depth: 1
+    toc-title: Daily work with GitHub
+
+    self-contained: false    
+    preview-links: auto
+    email-obfuscation: javascript
+    highlight-style: github
+    chalkboard: 
+      boardmarker-width: 3
+header-includes: |
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        rel="stylesheet"/>
+author:
+  - name: Julien LEBRANCHU
+    orcid: 0000-0002-7759-0534
+    email: julien.lebranchu@ird.fr
+    institution: IRD/MARBEC/OB7 
+date-modified: last-modified
+date: 30 01 2024
+filters:
+  - d2
+d2:
+  layout: elk
+  theme: "NeutralDefault"
+  sketch: false
+  pad: 0
+---
+
+::: hidden
+  {{< fa thumbs-up >}} 
+:::
+
+```{r}
+#| include: false
+library(countdown)
+countdown_timer <- function(
+    minutes = 1, 
+    play_sound = TRUE, 
+    font_size = "2em", 
+    ...
+) {
+  countdown(
+    minutes = minutes,
+    # Fanfare when it's over
+    play_sound = play_sound,
+    # Set timer theme to match solarized colors
+    color_border              = "#404041",
+    color_text                = "white",
+    color_background = "#447099",
+    color_running_background  = "#72994E",
+    color_running_text        = "white",
+    color_finished_background = "#EE6331",
+    color_finished_text       = "white",
+    font_size = font_size,
+    ...
+  )
+}
+```
+
+
+
+
+
+
+
+# Create a repository
+
+## Create a repository
+
+- In the upper-right corner of any page, select +, then click **New repository**.
+
+
+![](images/repo-create-global-nav-update.webp)
+
+## Create a repository
+
+- Optionally, to create a repository with the directory structure and files of an existing repository, select the **Choose a template** dropdown menu and click a template repository. You'll see template repositories that are owned by you and organizations you're a member of or that you've used before.
+
+- Optionally, if you chose to use a template, to include the directory structure and files from all branches in the template, and not just the default branch, select **Include all branches**.
+
+## Create a repository
+
+- Use the Owner dropdown menu to select the account you want to own the repository.
+
+![](images/create-repository-owner.webp)
+
+## Create a repository
+
+- Type a name for your repository, and an optional description.
+
+![](images/create-repository-name.webp)
+
+- Click **Create repository**.
+
+# Create a branch
+## Create a branch
+
+
+# Use the issue tracker
+## Use the issue tracker
+
+
+# Do a pull request
+## Do a pull request
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn  {background-color="#2472b5" transition="slide-in"}
+
+
