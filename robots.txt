@@ -1,0 +1,1 @@
+Sitemap: https://JulienLebranchu.github.io/git-training-sfa/sitemap.xml

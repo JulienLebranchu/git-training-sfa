@@ -116,14 +116,14 @@
     "href": "index.html",
     "title": "Getting Started with Git/GitHub",
     "section": "",
-    "text": "Pre Work\n\n\n\n\nInstall latest version of RStudio\nDownload and install Git from https://git-scm.com/downloads.\nDownload and install GitHub Desktop from https://desktop.github.com.\nCreate an account on GitHub"
+    "text": "Pre Work\n\n\n\n\n\nDownload and install Git from https://git-scm.com/downloads.\nDownload and install GitHub Desktop from https://desktop.github.com.\nCreate an account on GitHub"
   },
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "Getting Started with Git/GitHub",
     "section": "Overview",
-    "text": "Overview\nThis workshop is designed for those who want learn how use Git and GitHub.\n\nSchedule\n\n\n\nActivity\n\n\n\n\nIntroduction to Git/Github\n\n\nTraining with Git and GitHub\n\n\n\n\nGit Reminder |\n\n This work is licensed under a Creative Commons Attribution 4.0 International License."
+    "text": "Overview\nThis workshop is designed for those who want learn how use Git and GitHub.\n\nSchedule\n\n\n\nActivity\n\n\n\n\nIntroduction to Git/Github\n\n\nTraining with Git and GitHub\n\n\nGit Reminder\n\n\n\n\n This work is licensed under a Creative Commons Attribution 4.0 International License."
   },
   {
     "objectID": "materials/git-github-intro.html#what-is-version-control-software-vcs",
