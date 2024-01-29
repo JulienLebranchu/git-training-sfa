@@ -51,8 +51,6 @@ VCS improves the following factors:
 - Collaboration 
 - Storing Versions 
 - Backup 
-- Improves visibility 
-- Accelerate product delivery
 :::
 
 Version control - also known as source control or revision control - is an software development practice for tracking and managing changes made to code and other files. 
@@ -62,8 +60,6 @@ VCS improves the following factors:
 - Collaboration 
 - Storing Versions 
 - Backup 
-- Improves visibility 
-- Accelerate product delivery
 
 
 ## What is Version Control Software (VCS)
@@ -71,6 +67,8 @@ VCS improves the following factors:
 
 ::: {.notes}
 Two kind of CVS.
+
+Until 2000, the most used was Centralised VCS.
 
 Drawbacks of CVCS :
 
@@ -98,7 +96,8 @@ Benefits of DVCS:
 
 ![](images/git_logo.png){width=100}
 
-- The most popular Version Control Software (**VCS**)
+- The most popular **Distributed** Version Control Software (**VCS**)
+- Git was originally authored by **Linus Torvalds** in 2005 
 - **Free** and **open source** software
 - **Light** and **local use** (without the internet)
 - **Manages** and **tracks versions** of a project (code, manuscript, data)
@@ -113,7 +112,7 @@ Benefits of DVCS:
 - **Synchronise** the project in the **cloud** with git servers (GitHub, Gitlab)
 
 ::: {.notes}
-It can use for projet with a single user.
+It can be use for project with a single user.
 
 For example, I use git and gitlab to write this training :
 
@@ -130,10 +129,11 @@ It will be easier if tomorrow someone from my team want collaborate on this proj
 - **Highlight a specific version** of the project (*tags*)
     - A new version of a software
     - Submitted, revised versions of a paper
-- Create **derivatives** of a project (*branches*)
-    - Production
-    - Development
-    - Feature
+- Create **derivatives** of a project (*branches*): 
+    - Main
+    - Chapter-1
+    - Chapter-2
+    - Chapter-N
 - **Publish** the project (open science)
 
 ::: {.notes}
@@ -165,9 +165,27 @@ More complex is the Git Flow strategy.
 
 # Presentation of GitHub
 
+::: {.notes}
+
+Now, we talk about GitHub, a web-based hosting service for version control using **Git**. 
+
+:::
+
 ## What is GitHub Inc.? {scrollable=true}
 
-![](images/github-mark.png){width=100} **GitHub** is a web-based hosting service for version control using **Git**. 
+![](images/github-mark.png){width=50} **GitHub** is a web-based hosting service for version control using **Git**. 
+
+![](images/git-hub.png){width=60%}
+
+::: {.notes}
+
+GitHub host a git repository like on your laptop
+
+:::
+
+## What is GitHub Inc.? {scrollable=true}
+
+![](images/github-mark.png){width=50} **GitHub** is a web-based hosting service for version control using **Git**. 
 
 - Access to the control and collaboration features for every **project**.
 - Work with public and private **repositories**.
@@ -182,15 +200,15 @@ More complex is the Git Flow strategy.
 ![](images/github-t3-project-code.png)
 
 ## Example: T3 repository
+### Branch interfaces
+
+![](images/github-t3-project-branch.png)
+
+## Example: T3 repository
 ### Issue interface
 
 ![](images/github-t3-project-issue.png)
 
-
-## Example: T3 repository
-### Branch interfaces
-
-![](images/github-t3-project-branch.png)
 
 
 ## Example: T3 repository
@@ -234,6 +252,11 @@ github-action -> github-pages: Push to gh-pages branch and deploy
 
 # Go further in Git
 
+::: {.notes}
+So I have present generalities about git and github, what is the difference between them.
+Now,  let's talk about the heart of git and how it works.
+:::
+
 ## Git architecture
 
 ```{.d2 height="300px"}
@@ -242,9 +265,9 @@ workspace.shape: cylinder
 index.shape: cylinder
 local.shape: cylinder
 
-Workspace -> Index : git add
+Workspace -> Index : add
 
-Index -> Local : git commit
+Index -> Local : commit
 ```
 - `Workspace`: your working directory $\rightarrow$ your computer
 - `Local`: the local repository $\rightarrow$ contains the history of your project
@@ -254,6 +277,34 @@ Command:
 
 - `add`: the command to add the file(s) to the list of tracked files
 - `commit`: the command to validate a version
+
+
+## Git architecture
+
+```{.d2 height="300px"}
+direction: right
+workspace.shape: cylinder
+index.shape: cylinder
+local.shape: cylinder
+remote.shape: cylinder
+
+Workspace -> Index
+Index -> Local
+Local -> Remote : push
+
+```
+- `Workspace`: your working directory $\rightarrow$ your computer
+- `Local`: the local repository $\rightarrow$ contains the history of your project
+- `Index` or `Stage`: a buffer between `Workspace` and `Local` $\rightarrow$ the list of files to be committed
+- `Remote`: the remote directory $\rightarrow$ Source of truth (shared by all)
+
+Command:
+
+- `push`: Update remote refs along with associated objects
+
+
+::: {.notes}
+:::
 
 ## Git architecture and command transport
 
