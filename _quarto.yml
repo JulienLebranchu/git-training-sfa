@@ -26,7 +26,7 @@ website:
             text: "Git Reminder"
     right: 
       - icon: gitlab
-        href: https://github.com/rstudio-conf-2022/get-started-quarto
+        href: https://forge.ird.fr/marbec/ob7/training/git-training
   sidebar: 
     style: docked
     contents: 
