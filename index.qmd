@@ -8,10 +8,9 @@ format: html
 
 ## Pre Work
 
-- Install [latest](https://www.rstudio.com/products/rstudio/download/#download) version of RStudio
+<!-- - Install [latest](https://www.rstudio.com/products/rstudio/download/#download) version of RStudio -->
 - Download and install Git from <https://git-scm.com/downloads>.
 - Download and install GitHub Desktop from <https://desktop.github.com>.
-
 - Create an account on [GitHub](https://www.github.com)
 
 :::
@@ -27,7 +26,6 @@ This workshop is designed for those who want learn how use Git and GitHub.
 |:------------------------------------------------------|
 | [Introduction to Git/Github](materials/git-github-intro.html) |
 | [Training with Git and GitHub ](materials/git-training.html) |
-<!-- | [Work with GitHub ](materials/github-training.html) | -->
 | [Git Reminder](materials/git-reminder.html) |
 
 ------------------------------------------------------------------------
