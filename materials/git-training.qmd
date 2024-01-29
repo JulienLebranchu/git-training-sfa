@@ -34,7 +34,9 @@ d2:
 ---
 
 ::: hidden
-  {{< fa thumbs-up >}} 
+
+{{< fa thumbs-up >}}
+
 :::
 
 ```{r}
@@ -137,10 +139,22 @@ Fichiers non suivis:
 
 aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)
 ````
-
+<!-- 
 ```{mermaid}
 graph LR
     A[fa:fa-file Workspace] ----> B[Index] ----> C[Local]
+``` 
+ -->
+
+```{.d2}
+direction: right
+Workspace: {
+  shape: image
+  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
+}
+
+Workspace -> Index -> Local
+
 ``` 
 
 ## First Commit
@@ -149,12 +163,24 @@ graph LR
 ```Shell
 $ git add README.md
 ```
-
+<!-- 
 ```{mermaid}
 graph LR
-    A[Workspace] -- git add --> B[fa:fa-file Index] ----> C[Local]  
-```
+    A[Workspace] --  add --> B[fa:fa-file Index] ----> C[Local]  
+``` 
+-->
 
+```{.d2}
+direction: right
+Index: {
+  shape: image
+  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
+}
+
+Workspace -> Index : add
+Index -> Local
+
+``` 
 ```Shell
 $ git status
 ```
@@ -169,10 +195,25 @@ Modifications qui seront validées :
 ## First Commit
 
 - Type `git commit -m ”First commit”`
+
+<!-- 
 ```{mermaid}
 graph LR
     A[Workspace] ----> B[Index] -- git commit --> C[Local]   
-```
+``` 
+-->
+
+
+```{.d2}
+direction: right
+Local: {
+  shape: image
+  icon: https://icons.terrastruct.com/essentials%2F257-file.svg
+}
+
+Workspace -> Index 
+Index -> Local : commit
+``` 
 
 ```Shell
 $ git commit -m "First commit"
