@@ -540,6 +540,74 @@ gitGraph
 - Write explicit **commit message**
 - **Push** regularly
 
+
+
+# Training on collaborative project
+
+## Collaborating on a project
+
+- Write **together** an awesome book : *THE BEST BOOK*
+- Repos : [fuzzy-octo-quarto-book](https://github.com/JulienLebranchu/fuzzy-octo-quarto-book)
+
+- Each one will participate to write a chapter. 
+
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn / Clone the repo {background-color="#2472b5" transition="slide-in"}
+
+- Open `Github Desktop` 
+- Clone `fuzzy-octo-quarto-book`, URL : `https://github.com/JulienLebranchu/fuzzy-octo-quarto-book`
+- Change the current branch to `develop`
+- Create a branch from `develop` with your section and your lastname, ie `it-gabriel`
+
+```{R}
+#| echo: false
+
+countdown_timer(5)
+```
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn / Add a chapter {background-color="#2472b5" transition="slide-in"}
+
+- Create a file name with the extension ".qmd" in the directory `it` or `stats`
+- Add content by copy/pasting from the `resources.qmd` file
+- Add your filename in the `_quarto.yml`
+
+```
+  chapters:
+    - ...
+    - part: stats.qmd
+      chapters: 
+      - stats/content.qmd
+      - stats/XXX.qmd
+    - part: it.qmd
+      chapters: 
+      - it/content.qmd
+      - it/XXX.qmd
+```
+
+```{R}
+#| echo: false
+
+countdown_timer(5)
+```
+
+## `r fontawesome::fa("laptop-code", "white")` Your Turn  {background-color="#2472b5" transition="slide-in"}
+
+- Add the change file to `index`
+- Commit your changes to `local`
+  - Remember, you must write an explicit message
+- Push your changes on the remote repository
+- Go on github and explore the repository
+  - <https://github.com/JulienLebranchu/fuzzy-octo-quarto-book>
+
+
+```{R}
+#| echo: false
+
+countdown_timer(2)
+```
+
+# Go further
+
 ## GitHub and RStudio
 
 We need to link RStudio and GitHub to work togheter *without enter the identifier/password each time*.
