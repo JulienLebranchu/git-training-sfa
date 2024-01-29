@@ -1,0 +1,422 @@
+[
+  {
+    "objectID": "materials/github-training.html#create-a-repository-1",
+    "href": "materials/github-training.html#create-a-repository-1",
+    "title": "Work with GitHub",
+    "section": "Create a repository",
+    "text": "Create a repository\n\nIn the upper-right corner of any page, select +, then click New repository."
+  },
+  {
+    "objectID": "materials/github-training.html#create-a-repository-2",
+    "href": "materials/github-training.html#create-a-repository-2",
+    "title": "Work with GitHub",
+    "section": "Create a repository",
+    "text": "Create a repository\n\nOptionally, to create a repository with the directory structure and files of an existing repository, select the Choose a template dropdown menu and click a template repository. You’ll see template repositories that are owned by you and organizations you’re a member of or that you’ve used before.\nOptionally, if you chose to use a template, to include the directory structure and files from all branches in the template, and not just the default branch, select Include all branches."
+  },
+  {
+    "objectID": "materials/github-training.html#create-a-repository-3",
+    "href": "materials/github-training.html#create-a-repository-3",
+    "title": "Work with GitHub",
+    "section": "Create a repository",
+    "text": "Create a repository\n\nUse the Owner dropdown menu to select the account you want to own the repository."
+  },
+  {
+    "objectID": "materials/github-training.html#create-a-repository-4",
+    "href": "materials/github-training.html#create-a-repository-4",
+    "title": "Work with GitHub",
+    "section": "Create a repository",
+    "text": "Create a repository\n\nType a name for your repository, and an optional description.\n\n\n\nClick Create repository."
+  },
+  {
+    "objectID": "materials/github-training.html#create-a-branch-1",
+    "href": "materials/github-training.html#create-a-branch-1",
+    "title": "Work with GitHub",
+    "section": "Create a branch",
+    "text": "Create a branch"
+  },
+  {
+    "objectID": "materials/github-training.html#use-the-issue-tracker-1",
+    "href": "materials/github-training.html#use-the-issue-tracker-1",
+    "title": "Work with GitHub",
+    "section": "Use the issue tracker",
+    "text": "Use the issue tracker"
+  },
+  {
+    "objectID": "materials/github-training.html#do-a-pull-request-1",
+    "href": "materials/github-training.html#do-a-pull-request-1",
+    "title": "Work with GitHub",
+    "section": "Do a pull request",
+    "text": "Do a pull request"
+  },
+  {
+    "objectID": "materials/github-training.html#your-turn",
+    "href": "materials/github-training.html#your-turn",
+    "title": "Work with GitHub",
+    "section": " Your Turn",
+    "text": "Your Turn"
+  },
+  {
+    "objectID": "materials/git-reminder.html#configure-tooling",
+    "href": "materials/git-reminder.html#configure-tooling",
+    "title": "Git Reminder",
+    "section": "Configure tooling",
+    "text": "Configure tooling\nConfigure user information for all local repositories\nSets the name you want attached to your commit transactions\n$ git config --global user.name \"[name]\"\nSets the email you want attached to your commit transactions\n$ git config --global user.email \"[email address]\"\nEnables helpful colorization of command line output\n$ git config --global color.ui auto"
+  },
+  {
+    "objectID": "materials/git-reminder.html#branches",
+    "href": "materials/git-reminder.html#branches",
+    "title": "Git Reminder",
+    "section": "Branches",
+    "text": "Branches\nBranches are an important part of working with Git.\nAny commits you make will be made on the branch you’re currently “checked out” to. Use git status to see which branch that is.\nCreates a new branch\n$ git branch [branch-name]\nSwitches to the specified branch and updates the working directory\n$ git switch -c [branch-name]\nCombines the specified branch’s history into the current branch. This is usually done in pull requests, but is an important Git operation.\n$ git merge [branch]\nDeletes the specified branch\n$ git branch -d [branch-name]"
+  },
+  {
+    "objectID": "materials/git-reminder.html#create-repositories",
+    "href": "materials/git-reminder.html#create-repositories",
+    "title": "Git Reminder",
+    "section": "Create repositories",
+    "text": "Create repositories\nA new repository can either be created locally, or an existing repository can be cloned. When a repository was initialized locally, you have to push it to GitHub afterwards.\nThe git init command turns an existing directory into a new Git repository inside the folder you are running this command. After using the git init command, link the local repository to an empty GitHub repository using the following command:\n$ git init\nSpecifies the remote repository for your local repository. The url points to a repository on GitHub.\n$ git remote add origin [url]\nClone (download) a repository that already exists on GitHub, including all of the files, branches, and commits\n$ git clone [url]"
+  },
+  {
+    "objectID": "materials/git-reminder.html#the-.gitignore-file",
+    "href": "materials/git-reminder.html#the-.gitignore-file",
+    "title": "Git Reminder",
+    "section": "The .gitignore file",
+    "text": "The .gitignore file\nSometimes it may be a good idea to exclude files from being tracked with Git. This is typically done in a special file named .gitignore. You can find helpful templates for .gitignore files at https://github.com/github/gitignore."
+  },
+  {
+    "objectID": "materials/git-reminder.html#synchronize-changes",
+    "href": "materials/git-reminder.html#synchronize-changes",
+    "title": "Git Reminder",
+    "section": "Synchronize changes",
+    "text": "Synchronize changes\nSynchronize your local repository with the remote repository on GitHub.com\nDownloads all history from the remote tracking branches\n$ git fetch\nCombines remote tracking branches into current local branch\n$ git merge\nUploads all local branch commits to GitHub\n$ git push\nUpdates your current local working branch with all new commits from the corresponding remote branch on GitHub. git pull is a combination of git fetch and git merge\n$ git pull"
+  },
+  {
+    "objectID": "materials/git-reminder.html#make-changes",
+    "href": "materials/git-reminder.html#make-changes",
+    "title": "Git Reminder",
+    "section": "Make changes",
+    "text": "Make changes\nBrowse and inspect the evolution of project files\nLists version history for the current branch\n$ git log\nLists version history for a file, beyond renames (works only for a single file)\n$ git log --follow [file]\nShows content differences between two branches\n$ git diff [first-branch]...[second-branch]\nOutputs metadata and content changes of the specified commit\n$ git show [commit]\nSnapshots the file in preparation for versioning\n$ git add [file]\nRecords file snapshots permanently in version history\n$ git commit -m \"[descriptive message]\""
+  },
+  {
+    "objectID": "materials/git-reminder.html#redo-commits",
+    "href": "materials/git-reminder.html#redo-commits",
+    "title": "Git Reminder",
+    "section": "Redo commits",
+    "text": "Redo commits\nErase mistakes and craft replacement history\nUndoes all commits after [commit], preserving changes locally\n$ git reset [commit]\nDiscards all history and changes back to the specified commit\n$ git reset --hard [commit]\n\n\n\n\n\n\nCaution\n\n\nCAUTION! Changing history can have nasty side effects. If you need to change commits that exist on GitHub (the remote), proceed with caution."
+  },
+  {
+    "objectID": "materials/git-reminder.html#glossary",
+    "href": "materials/git-reminder.html#glossary",
+    "title": "Git Reminder",
+    "section": "Glossary",
+    "text": "Glossary\n\ngit: an open source, distributed version-control system\nGitHub: a platform for hosting and collaborating on Git repositories\ncommit: a Git object, a snapshot of your entire repository compressed into a SHA\nbranch: a lightweight movable pointer to a commit\nclone: a local version of a repository, including all commits and branches\nremote: a common repository on GitHub that all team members use to exchange their changes\nfork: a copy of a repository on GitHub owned by a different user pull request: a place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more\nHEAD: representing your current working directory, the HEAD pointer can be moved to different branches, tags, or commits when using git switch\n\nVersion PDF :\nhttps://training.github.com/downloads/github-git-cheat-sheet.pdf"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Getting Started with Git/GitHub",
+    "section": "",
+    "text": "Pre Work\n\n\n\n\nInstall latest version of RStudio\nDownload and install Git from https://git-scm.com/downloads.\nDownload and install GitHub Desktop from https://desktop.github.com.\nCreate an account on GitHub"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Getting Started with Git/GitHub",
+    "section": "Overview",
+    "text": "Overview\nThis workshop is designed for those who want learn how use Git and GitHub.\n\nSchedule\n\n\n\nActivity\n\n\n\n\nIntroduction to Git/Github\n\n\nTraining with Git and GitHub\n\n\n\n\nGit Reminder |\n\n This work is licensed under a Creative Commons Attribution 4.0 International License."
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-version-control-software-vcs",
+    "href": "materials/git-github-intro.html#what-is-version-control-software-vcs",
+    "title": "Git & GitHub training",
+    "section": "What is Version Control Software (VCS)",
+    "text": "What is Version Control Software (VCS)\nGit is Version Control Software\n\nVCS is a software to track and manages changes in your project.\nIt’s for all kind of projets:\n\nto develop a full software\nto write an article or a report for a scientific journal or IOTC secreteriat\nto publish a website …\n\nVCS improves the following factors:\n\nCollaboration\nStoring Versions\nBackup\n\n\nVersion control - also known as source control or revision control - is an software development practice for tracking and managing changes made to code and other files.\nVCS improves the following factors:\n\nCollaboration\nStoring Versions\nBackup"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-version-control-software-vcs-1",
+    "href": "materials/git-github-intro.html#what-is-version-control-software-vcs-1",
+    "title": "Git & GitHub training",
+    "section": "What is Version Control Software (VCS)",
+    "text": "What is Version Control Software (VCS)\nCentralised vs Distributed\n\nTwo kind of CVS.\nUntil 2000, the most used was Centralised VCS.\nDrawbacks of CVCS :\n\nIt is not locally available, which means we must connect to the network to perform operations.\nDuring the operations, if the central server gets crashed, there is a high chance of losing the data.\nFor every command, CVCS connects the central server which impacts speed of operation\n\nBenefits of DVCS: ​ - Except for pushing and pulling the code, the user can work offline in DVCS - DVCS is fast compared to CVCS because you don’t have to contact the central server for every command - Merging and branching the changes in DVCS is very easy - Performance of DVCS is better - Even if the main server crashes, code will be stored in the local systems"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-git",
+    "href": "materials/git-github-intro.html#what-is-git",
+    "title": "Git & GitHub training",
+    "section": "What is Git ?",
+    "text": "What is Git ?\n\n\n\n\n\nThe most popular Distributed Version Control Software (VCS)\nGit was originally authored by Linus Torvalds in 2005\nFree and open source software\nLight and local use (without the internet)\nManages and tracks versions of a project (code, manuscript, data)\nCan be linked with a remote server (GitHub, Gitlab)"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-git-for",
+    "href": "materials/git-github-intro.html#what-is-git-for",
+    "title": "Git & GitHub training",
+    "section": "What is Git for ?",
+    "text": "What is Git for ?\nFor a single user\n\nTrack changes (commits) over time with information about when and what are the changes\nEventually go back in time\nSynchronise the project in the cloud with git servers (GitHub, Gitlab)\n\n\nIt can be use for project with a single user.\nFor example, I use git and gitlab to write this training :\nhttps://forge.ird.fr/marbec/ob7/training/git-training.git/\nIt will be easier if tomorrow someone from my team want collaborate on this project or if you want get the code for you, you will always have the last version."
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-git-for-1",
+    "href": "materials/git-github-intro.html#what-is-git-for-1",
+    "title": "Git & GitHub training",
+    "section": "What is Git for ?",
+    "text": "What is Git for ?\nFor a collaborative project\n\nTrack changes (commits) with information about who, when and what are the changes\nResolve version conflict when simultaneous changes\nHighlight a specific version of the project (tags)\n\nA new version of a software\nSubmitted, revised versions of a paper\n\nCreate derivatives of a project (branches):\n\nMain\nChapter-1\nChapter-2\nChapter-N\n\nPublish the project (open science)"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-git-for-2",
+    "href": "materials/git-github-intro.html#what-is-git-for-2",
+    "title": "Git & GitHub training",
+    "section": "What is Git for ?",
+    "text": "What is Git for ?\nExample of branches\n\n\n\n\n\n\n\n\nYou can develop your own strategy inside a project.\nMinimalist is to have two branches mainand develop\nMore complex is the Git Flow strategy."
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-github-inc.",
+    "href": "materials/git-github-intro.html#what-is-github-inc.",
+    "title": "Git & GitHub training",
+    "section": "What is GitHub Inc.?",
+    "text": "What is GitHub Inc.?\n GitHub is a web-based hosting service for version control using Git.\n\n\nGitHub host a git repository like on your laptop"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#what-is-github-inc.-1",
+    "href": "materials/git-github-intro.html#what-is-github-inc.-1",
+    "title": "Git & GitHub training",
+    "section": "What is GitHub Inc.?",
+    "text": "What is GitHub Inc.?\n GitHub is a web-based hosting service for version control using Git.\n\nAccess to the control and collaboration features for every project.\nWork with public and private repositories.\nDevelop networking.\nSource of information.\nAllows to host personal websites\nContinuous integration using GitHub Actions"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#example-t3-repository",
+    "href": "materials/git-github-intro.html#example-t3-repository",
+    "title": "Git & GitHub training",
+    "section": "Example: T3 repository",
+    "text": "Example: T3 repository\nPresentation of repository"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#example-t3-repository-1",
+    "href": "materials/git-github-intro.html#example-t3-repository-1",
+    "title": "Git & GitHub training",
+    "section": "Example: T3 repository",
+    "text": "Example: T3 repository\nBranch interfaces"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#example-t3-repository-2",
+    "href": "materials/git-github-intro.html#example-t3-repository-2",
+    "title": "Git & GitHub training",
+    "section": "Example: T3 repository",
+    "text": "Example: T3 repository\nIssue interface"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#example-t3-repository-3",
+    "href": "materials/git-github-intro.html#example-t3-repository-3",
+    "title": "Git & GitHub training",
+    "section": "Example: T3 repository",
+    "text": "Example: T3 repository\nGitHub actions"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#git-architecture",
+    "href": "materials/git-github-intro.html#git-architecture",
+    "title": "Git & GitHub training",
+    "section": "Git architecture",
+    "text": "Git architecture\n\n\nWorkspace: your working directory \\(\\rightarrow\\) your computer\nLocal: the local repository \\(\\rightarrow\\) contains the history of your project\nIndex or Stage: a buffer between Workspace and Local \\(\\rightarrow\\) the list of files to be committed\n\nCommand:\n\nadd: the command to add the file(s) to the list of tracked files\ncommit: the command to validate a version"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#git-architecture-1",
+    "href": "materials/git-github-intro.html#git-architecture-1",
+    "title": "Git & GitHub training",
+    "section": "Git architecture",
+    "text": "Git architecture\n\n\nWorkspace: your working directory \\(\\rightarrow\\) your computer\nLocal: the local repository \\(\\rightarrow\\) contains the history of your project\nIndex or Stage: a buffer between Workspace and Local \\(\\rightarrow\\) the list of files to be committed\nRemote: the remote directory \\(\\rightarrow\\) Source of truth (shared by all)\n\nCommand:\n\npush: Update remote refs along with associated objects"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#git-architecture-and-command-transport",
+    "href": "materials/git-github-intro.html#git-architecture-and-command-transport",
+    "title": "Git & GitHub training",
+    "section": "Git architecture and command transport",
+    "text": "Git architecture and command transport\n\nCommand:\n\npush: Update remote refs along with associated objects\nfetch: Download objects and refs from another repository\nrebase: Reapply commits on top of another base tip\npull: Fetch from and integrate with another repository or a local branch"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#good-practices",
+    "href": "materials/git-github-intro.html#good-practices",
+    "title": "Git & GitHub training",
+    "section": "Good practices",
+    "text": "Good practices\n\nPull before any work on the project\nCommit as frequently as possible\nWrite explicit commit message\nPush regularly"
+  },
+  {
+    "objectID": "materials/git-github-intro.html#rgitgithub-sources",
+    "href": "materials/git-github-intro.html#rgitgithub-sources",
+    "title": "Git & GitHub training",
+    "section": "R/Git/GitHub && Sources",
+    "text": "R/Git/GitHub && Sources\nGo further\n\nHappy Git and GitHub for the useR\n\nhttps://happygitwithr.com\n\n\nSources\n\nUMR MARBEC : Support de formation\n\nhttps://github.com/umr-marbec/git-training\n\nUMR AMAP (Atelier MAIA P3M), Montpellier: Introduction à GIT (04/04/2019)\nPlateau bioinformatique, Montpellier: Formation Git(Lab) (05/04/2018)\nFor the bold: the full Git documentation (506 pages!)\n\nhttps://git-scm.com/book/en/v2"
+  },
+  {
+    "objectID": "materials/git-training.html#installation-and-configuration-1",
+    "href": "materials/git-training.html#installation-and-configuration-1",
+    "title": "Git & GitHub training",
+    "section": "Installation and configuration",
+    "text": "Installation and configuration\nInstalling Git [Windows and Mac]\n\nDownload and install Git from https://git-scm.com/downloads.\nDownload and install GitHub Desktop from https://desktop.github.com."
+  },
+  {
+    "objectID": "materials/git-training.html#installation-and-configuration-2",
+    "href": "materials/git-training.html#installation-and-configuration-2",
+    "title": "Git & GitHub training",
+    "section": "Installation and configuration",
+    "text": "Installation and configuration\nGit configuration: register who your are\nWhen done, open Git Bash, type\ngit config --global user.name \"Firstname Lastname\"\ngit config --global user.email \"email@adress.org\"\nN.B. These two lines identify you in the history of a project.\ngit config --global --list"
+  },
+  {
+    "objectID": "materials/git-training.html#installation-and-configuration-3",
+    "href": "materials/git-training.html#installation-and-configuration-3",
+    "title": "Git & GitHub training",
+    "section": "Installation and configuration",
+    "text": "Installation and configuration\nGit configuration with GitHub Desktop: register who your are\n\nIn the menu bar, select GitHub Desktop, then click Preferences*.\nIn the Preferences window, click Git.\n\n\nMore details on Configuring and customizing GitHub Desktop"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn",
+    "href": "materials/git-training.html#your-turn",
+    "title": "Git & GitHub training",
+    "section": " Your Turn",
+    "text": "Your Turn\n\n\n\nOpen Github Desktop and create a new repository training-git\nChoose a local path\nClick on Create Repository\n\n\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "materials/git-training.html#first-commit",
+    "href": "materials/git-training.html#first-commit",
+    "title": "Git & GitHub training",
+    "section": "First Commit",
+    "text": "First Commit\n\nCreate a README.md file \\(\\rightarrow\\) README.md is now in Workspace but not in Local\nWhen you type git status\n\n$ git status\nSur la branche main\nFichiers non suivis:\n  (utilisez \"git add &lt;fichier&gt;...\" pour inclure dans ce qui sera validé)\n    README.md\n\naucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez \"git add\" pour les suivre)"
+  },
+  {
+    "objectID": "materials/git-training.html#first-commit-1",
+    "href": "materials/git-training.html#first-commit-1",
+    "title": "Git & GitHub training",
+    "section": "First Commit",
+    "text": "First Commit\n\nType git add README.md and git status\n\n$ git add README.md\n\n\n$ git status\nSur la branche main\nModifications qui seront validées :\n  (utilisez \"git restore --staged &lt;fichier&gt;...\" pour désindexer)\n    nouveau fichier : README.md"
+  },
+  {
+    "objectID": "materials/git-training.html#first-commit-2",
+    "href": "materials/git-training.html#first-commit-2",
+    "title": "Git & GitHub training",
+    "section": "First Commit",
+    "text": "First Commit\n\nType git commit -m ”First commit”\n\n\n\n$ git commit -m \"First commit\"\n[main fde1cd2] First commit\n 1 file changed, 0 insertions(+), 0 deletions(-)\n create mode 100644 README.md\nfde1cd2 is a short version of the identifier of the commit\n\nType git log\n\n$ git log\ncommit fde1cd295a8403756d655ec6d1f2be9eb908f649 (HEAD -&gt; main)\nAuthor: Julien Lebranchu &lt;julien.lebranchu@ird.fr&gt;\nDate:   Fri Oct 20 14:36:19 2023 +0400\n\n    First commit\n\ncommit 25681b3e0212f771a4594abc008d5352436a6244\nAuthor: Julien Lebranchu &lt;julien.lebranchu@ird.fr&gt;\nDate:   Fri Oct 20 14:35:11 2023 +0400\n\n    Initial commit"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-1",
+    "href": "materials/git-training.html#your-turn-1",
+    "title": "Git & GitHub training",
+    "section": " Your Turn",
+    "text": "Your Turn\n\n\n\nCreate a README.md file from your explorer file\nWith the GitHub Desktop\n\nAdd the file\nCommit the changes\n\nExplore the interface, specialy history tab.\n\n\n\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-2",
+    "href": "materials/git-training.html#your-turn-2",
+    "title": "Git & GitHub training",
+    "section": " Your Turn",
+    "text": "Your Turn\n\n\n\nAdd a content in README.md file and commit the changes\n\n\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "materials/git-training.html#creating-tags",
+    "href": "materials/git-training.html#creating-tags",
+    "title": "Git & GitHub training",
+    "section": "Creating tags",
+    "text": "Creating tags\nGit has the ability to tag specific points in a repository’s history as being important. Typically, people use this functionality to mark release points (v1.0, v2.0 and so on).\n$ git tag -a v1.0.O -m \"my version 1.0.0\""
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-3",
+    "href": "materials/git-training.html#your-turn-3",
+    "title": "Git & GitHub training",
+    "section": " Your Turn",
+    "text": "Your Turn\n\n\n\nOpen the README.md file\nType ## Version v1.0.0.\nCommit the changes\nCreate a tag v1.0.0 with right click the last commit\n\n\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "materials/git-training.html#ignoring-files",
+    "href": "materials/git-training.html#ignoring-files",
+    "title": "Git & GitHub training",
+    "section": "Ignoring files",
+    "text": "Ignoring files\nIt is possible to tell Git to ignore some files by using a .gitignore file.\nA gitignore file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected.\nExample for R project\n# History files\n.Rhistory\n.Rapp.history\n\n# Session Data files\n.RData\n.RDataTmp\n\n# User-specific files\n.Ruserdata"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-4",
+    "href": "materials/git-training.html#your-turn-4",
+    "title": "Git & GitHub training",
+    "section": " Your Turn",
+    "text": "Your Turn\n\n\n\nCreate an empty output.log file\nCheck the status in GitHub Desktop\nNow create a .gitignore file\n\nwrite *.log.\n\nThe output.log file no longer appears as Untracked\nCommit with ”Fourth commit”\n\n\n\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "materials/git-training.html#moving-in-the-history",
+    "href": "materials/git-training.html#moving-in-the-history",
+    "title": "Git & GitHub training",
+    "section": "Moving in the history",
+    "text": "Moving in the history\n\ngit checkout v1.0.0 → move to a tag\n\n\n\n\n\n%%{init: {\n  \"theme\": \"base\"\n}}%%\ngitGraph\n    commit id: \"25681b3\"\n    commit id: \"fde1cd2\"\n    commit id: \"9b0dce3\"\n    commit id: \"017fc9d\" tag: \"v1.0.0\" type: HIGHLIGHT\n    commit id: \"fe96d29\"\n\n\n\n\n\n\ngit checkout fde1cd2 → move to the first commit\n\n\n\n\n\n%%{init: {\n  \"theme\": \"base\"\n}}%%\ngitGraph\n    commit id: \"25681b3\"\n    commit id: \"fde1cd2\" type: HIGHLIGHT\n    commit id: \"9b0dce3\"\n    commit id: \"017fc9d\" tag: \"v1.0.0\"\n    commit id: \"fe96d29\"\n\n\n\n\n\n\ngit checkout main (master) → move at the latest commit\n\n\n\n\n\n%%{init: {\n  \"theme\": \"base\"\n}}%%\ngitGraph\n    commit id: \"25681b3\"\n    commit id: \"fde1cd2\"\n    commit id: \"9b0dce3\"\n    commit id: \"017fc9d\" tag: \"v1.0.0\"\n    commit id: \"fe96d29\" type: HIGHLIGHT\n\n\n\n\n\nN.B. HEAD is a symbolic reference pointing to your location in history"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-publishing-on-github",
+    "href": "materials/git-training.html#your-turn-publishing-on-github",
+    "title": "Git & GitHub training",
+    "section": " Your Turn / Publishing on GitHub",
+    "text": "Your Turn / Publishing on GitHub\n\nOpen Github Desktop\nClick on Publish repository\nView the repository on https://www.github.com\n\nGo to Repository &gt; View on GitHub\nExplore the Repository\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-resolve-a-conflict",
+    "href": "materials/git-training.html#your-turn-resolve-a-conflict",
+    "title": "Git & GitHub training",
+    "section": " Your Turn / Resolve a conflict",
+    "text": "Your Turn / Resolve a conflict\n\nOn GitHub, add x = 1 at the end of the README.md file.\nOn your computer, edit the README.md and add x = 2.\nOpen Github Desktop\n\nAdd README.md\nCommit Fifth commit\nPush the commit\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "materials/git-training.html#resolve-a-conflict",
+    "href": "materials/git-training.html#resolve-a-conflict",
+    "title": "Git & GitHub training",
+    "section": "Resolve a conflict",
+    "text": "Resolve a conflict\n\nThis is due to a diverging history that cannot be solved automatically by Git.\norigin/main corresponding to the version on the remote server\n\n\n\n\n\n%%{init: {\n  \"theme\": \"base\"\n}}%%\ngitGraph\n    commit id: \"25681b3\"\n    commit id: \"fde1cd2\"\n    commit id: \"9b0dce3\"\n    commit id: \"017fc9d\" tag: \"v1.0.0\"\n    commit id: \"fe96d29\"\n    branch origin/main\n      commit id: \"4ba5ab5\"\n    checkout main\n    commit id: \"5af862d\""
+  },
+  {
+    "objectID": "materials/git-training.html#resolve-a-conflict-1",
+    "href": "materials/git-training.html#resolve-a-conflict-1",
+    "title": "Git & GitHub training",
+    "section": "Resolve a conflict",
+    "text": "Resolve a conflict\nIf we open the README.md file, you should have\n## Version v1.0.0.\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nx = 2\n=======\nx = 1\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; 4ba5ab5f6ba79f7ac53d6bcf7ffc7e883ab469e2\nN.B. These are conflicts markers.\nGit doesn’t know whether to chose x = 1 or x = 2. This is your job!!"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-resolve-a-conflict-1",
+    "href": "materials/git-training.html#your-turn-resolve-a-conflict-1",
+    "title": "Git & GitHub training",
+    "section": " Your Turn / Resolve a conflict",
+    "text": "Your Turn / Resolve a conflict\n\nEdit the README.md and replace the 5 lines below by x = 3.\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nx = 2\n=======\nx = 1\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; 4ba5ab5f6ba79f7ac53d6bcf7ffc7e883ab469e2\n\nCommit and push the changes\n\n\n\n\n−+\n02:00\n\n\n\n\n\n\n\n%%{init: {\n  \"theme\": \"base\"\n}}%%\ngitGraph\n    commit id: \"25681b3\"\n    commit id: \"fde1cd2\"\n    commit id: \"9b0dce3\"\n    commit id: \"017fc9d\" tag: \"v1.0.0\"\n    commit id: \"fe96d29\"\n    branch origin/main\n      commit id: \"4ba5ab5\"\n    checkout main\n    commit id: \"5af862d\"\n    merge origin/main\n    commit id: \"aad87f1\""
+  },
+  {
+    "objectID": "materials/git-training.html#good-practices",
+    "href": "materials/git-training.html#good-practices",
+    "title": "Git & GitHub training",
+    "section": "Good practices",
+    "text": "Good practices\n\nPull before any work on the project\nCommit as frequently as possible\nWrite explicit commit message\nPush regularly"
+  },
+  {
+    "objectID": "materials/git-training.html#collaborating-on-a-project",
+    "href": "materials/git-training.html#collaborating-on-a-project",
+    "title": "Git & GitHub training",
+    "section": "Collaborating on a project",
+    "text": "Collaborating on a project\n\nWrite together an awesome book : THE BEST BOOK\nRepos : fuzzy-octo-quarto-book\nEach one will participate to write a chapter."
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-clone-the-repo",
+    "href": "materials/git-training.html#your-turn-clone-the-repo",
+    "title": "Git & GitHub training",
+    "section": " Your Turn / Clone the repo",
+    "text": "Your Turn / Clone the repo\n\nOpen Github Desktop\nClone fuzzy-octo-quarto-book, URL : https://github.com/JulienLebranchu/fuzzy-octo-quarto-book\nChange the current branch to develop\nCreate a branch from develop with your section and your lastname, ie it-gabriel\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-add-a-chapter",
+    "href": "materials/git-training.html#your-turn-add-a-chapter",
+    "title": "Git & GitHub training",
+    "section": " Your Turn / Add a chapter",
+    "text": "Your Turn / Add a chapter\n\nCreate a file name with the extension “.qmd” in the directory it or stats\nAdd content by copy/pasting from the resources.qmd file\nAdd your filename in the _quarto.yml\n\n  chapters:\n    - ...\n    - part: stats.qmd\n      chapters: \n      - stats/content.qmd\n      - stats/XXX.qmd\n    - part: it.qmd\n      chapters: \n      - it/content.qmd\n      - it/XXX.qmd\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "materials/git-training.html#your-turn-5",
+    "href": "materials/git-training.html#your-turn-5",
+    "title": "Git & GitHub training",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nAdd the change file to index\nCommit your changes to local\n\nRemember, you must write an explicit message\n\nPush your changes on the remote repository\nGo on github and explore the repository\n\nhttps://github.com/JulienLebranchu/fuzzy-octo-quarto-book\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "materials/git-training.html#github-and-rstudio",
+    "href": "materials/git-training.html#github-and-rstudio",
+    "title": "Git & GitHub training",
+    "section": "GitHub and RStudio",
+    "text": "GitHub and RStudio\nWe need to link RStudio and GitHub to work togheter without enter the identifier/password each time.\n\n\nlibrary(usethis)\nusethis::create_github_token(description = \"R-GITHUB-RSTUDIO\")\n\nFill the field “Expiration” with No expiration\nClick on Generate token\nCopy the token key : ghp_XXXXXXXXXXXXXX via \n\nlibrary(gitcreds)\ngitcreds_set()\n\nPaste the key"
+  }
+]
